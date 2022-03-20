@@ -14,9 +14,6 @@
     .search{
        padding:30px 65px 0px 65px;
     }
-    .box{
-        width: 300px;
-    }
     .card{
         display: flex;
         align-items: center;
