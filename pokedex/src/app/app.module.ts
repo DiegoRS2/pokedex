@@ -9,9 +9,11 @@ import { FooterComponent } from './template/footer/footer.component';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import  { NgxPaginationModule }  from  'ngx-pagination' ;
+import { NgxPaginationModule }  from  'ngx-pagination' ;
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ModalComponent } from './pages/modal/modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
