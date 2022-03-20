@@ -5,7 +5,7 @@
         <input type="text" class="form-control" name = "name" [(ngModel)]="name" (ngModelChange) = "search">
     </div>
     <mat-card class="home">
-        <mat-card class="card" *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText" >
+        <mat-card class="card" *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText">
             <div>
                 <img src="{{ p.sprites?.front_default }}" alt="imagens">
             </div>
