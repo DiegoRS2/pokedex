@@ -12,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule }  from  'ngx-pagination' ;
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { ModalComponent } from './pages/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
@@ -21,7 +20,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ModalComponent,
   ],
   imports: [
     BrowserModule,
