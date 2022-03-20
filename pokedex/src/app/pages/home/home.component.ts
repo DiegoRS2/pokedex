@@ -13,11 +13,12 @@ export class HomeComponent implements OnInit {
   poke: number = 1;
   searchText!: string;
   pokefilter!: Pokemons[];
-  name: any;
+  name!: any;
   constructor(private pokemonServices: PokeServiceService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getPokemons();
+    this.filtrar(this.searchText)
   }
 
   public getPokemons() {
@@ -37,7 +38,8 @@ export class HomeComponent implements OnInit {
           x => {
             pokeInformation.sprites = x.sprites;
             pokeInformation.id = x.id;
-            pokeInformation.types = x.types
+            pokeInformation.types = x.types;
+            this.filtrar(this.searchText);
           }
         )
       }
@@ -49,7 +51,10 @@ export class HomeComponent implements OnInit {
       pokename = pokename.toUpperCase();
 
       this.pokefilter = this.pokefilter.filter(a =>
-        a.name.toUpperCase().indexOf(pokename) >= 0
+        a.name.toUpperCase().indexOf(pokename) >= 0,
+        console.log(
+          this.searchText
+        )
       );
     }
   }
