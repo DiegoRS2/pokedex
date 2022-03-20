@@ -2,7 +2,6 @@ import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -63,10 +62,6 @@ export class HomeComponent implements OnInit {
         return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase)
       })
     }
-  }
-  openModal(): void {
-    const dialogRef = this.dialog.open(ModalComponent, {
-    });
   }
 }
 
