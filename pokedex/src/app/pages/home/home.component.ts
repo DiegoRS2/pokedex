@@ -1,6 +1,8 @@
-import { Pokemons, } from './../service/pokemon.model';
-import { PokeServiceService } from './../service/poke-service.service';
+import { Pokemons, } from '../service/pokemon.model';
+import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokefilter!: Pokemons[];
   name: any;
-  constructor(private pokemonServices: PokeServiceService) { }
+  constructor(private pokemonServices: PokeServiceService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getPokemons();
@@ -35,7 +37,8 @@ export class HomeComponent implements OnInit {
         this.pokemonServices.apiGetPokemon(pokeInformation.url).subscribe(
           x => {
             pokeInformation.sprites = x.sprites;
-            pokeInformation.id = x.id
+            pokeInformation.id = x.id;
+            pokeInformation.stats = x.stats
           }
         )
       }
@@ -61,7 +64,11 @@ export class HomeComponent implements OnInit {
       })
     }
   }
-
+  openModal(): void {
+    const dialogRef = this.dialog.open(ModalComponent, {
+    });
+  }
 }
+
 
 
