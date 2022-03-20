@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
           x => {
             pokeInformation.sprites = x.sprites;
             pokeInformation.id = x.id;
-            pokeInformation.stats = x.stats
+            pokeInformation.types = x.types
           }
         )
       }
