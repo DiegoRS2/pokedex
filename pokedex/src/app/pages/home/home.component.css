@@ -30,6 +30,7 @@
     .pagination{
         display: flex;
         margin: auto;
+        position: static;
     }
     .button {
         box-shadow:inset 0px 1px 0px 0px #f29c93;
