@@ -1,0 +1,26 @@
+<div class="body">
+    <div class="search">
+        <input class="box" type="text" name="search" [(ngModel)] = "searchText" autocomplete="off">   
+       
+        <input type="text" class="form-control" name = "name" [(ngModel)]="name" (ngModelChange) = "search">
+    </div>
+    <mat-card class="home">
+        <mat-card class="card" *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText" >
+            <div>
+                <img src="{{ p.sprites?.front_default }}" alt="imagens">
+            </div>
+            <div>
+                <h1>{{ p.name }}</h1>
+            </div>
+            <div>
+                <p>{{ p.id }}</p>
+            </div>
+           <div >
+               <button class="button">Info</button>
+           </div>
+        </mat-card>
+        <div class="pagination">
+            <pagination-controls (pageChange)="poke = $event"></pagination-controls>
+        </div>
+    </mat-card>
+</div>

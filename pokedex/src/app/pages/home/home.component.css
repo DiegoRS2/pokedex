@@ -1,0 +1,60 @@
+    .home{
+        width: 90%;
+        display: flex;
+        margin:30px auto;
+        flex-wrap: wrap;
+        background-color: rgb(141, 245, 141);
+        justify-content: space-between;
+        border-radius: 15px;
+    }
+    .body{
+        background-color: black;
+    }
+    .search{
+        display: flex;
+       
+        justify-content: flex-end;
+        margin-right: 52px;
+    }
+    .box{
+        width: 300px;
+    }
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 300px;
+        width: 250px;
+        margin-bottom: 20px;  
+    }
+    .pagination{
+        display: flex;
+        margin: auto;
+        color: white;
+    }
+    .button {
+        box-shadow:inset 0px 1px 0px 0px #f29c93;
+        background-color:#f03c28;
+        border-radius:19px;
+        border:1px solid #d83526;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:9px 45px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #b23e35;
+    }
+    .button:hover {
+        background-color:#ce0100;
+    }
+    .button:active {
+        position:relative;
+        top:1px;
+    }
+    
+
+    
