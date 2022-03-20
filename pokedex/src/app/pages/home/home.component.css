@@ -3,18 +3,16 @@
         display: flex;
         margin:30px auto;
         flex-wrap: wrap;
-        background-color: rgb(141, 245, 141);
+        background-color: #bad1c9;
         justify-content: space-between;
         border-radius: 15px;
+        padding: 30px;
     }
     .body{
-        background-color: black;
+        background-color: #8c162a;
     }
     .search{
-        display: flex;
-       
-        justify-content: flex-end;
-        margin-right: 52px;
+       padding:30px 65px 0px 65px;
     }
     .box{
         width: 300px;
@@ -26,12 +24,12 @@
         flex-direction: column;
         height: 300px;
         width: 250px;
-        margin-bottom: 20px;  
+        margin-bottom: 20px; 
+        background-color: #ebe5ce; 
     }
     .pagination{
         display: flex;
         margin: auto;
-        color: white;
     }
     .button {
         box-shadow:inset 0px 1px 0px 0px #f29c93;
@@ -55,6 +53,14 @@
         position:relative;
         top:1px;
     }
-    
+    .name{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
 
     
