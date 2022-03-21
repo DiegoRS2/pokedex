@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokefilter!: Pokemons[];
   name!: any;
-  constructor(private pokemonServices: PokeServiceService,private dialog: MatDialog) { }
+  constructor(private pokemonServices: PokeServiceService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getPokemons();
@@ -40,10 +40,8 @@ export class HomeComponent implements OnInit {
             pokeInformation.id = x.id;
             pokeInformation.types = x.types;
             this.filtrar(this.searchText);
-          }
-        )
-      }
-    )
+          })
+      })
   }
 
   filtrar(pokename: string) {
