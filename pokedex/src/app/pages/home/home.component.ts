@@ -1,7 +1,8 @@
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from 'src/app/shared/modal/modal.component';
+
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,10 @@ export class HomeComponent implements OnInit {
   poke: number = 1;
   searchText!: string;
   pokefilter!: Pokemons[];
-  name!: any;
-  constructor(private pokemonServices: PokeServiceService, private dialog: MatDialog) { }
+ 
+  constructor(
+    private pokemonServices: PokeServiceService,
+    ) { }
 
   ngOnInit(): void {
     this.getPokemons();
@@ -56,15 +59,8 @@ export class HomeComponent implements OnInit {
       );
     }
   }
-  search() {
-    if (this.name == "") {
-      this.ngOnInit();
-    }
-    else {
-      this.pokefilter = this.pokefilter.filter(res => {
-        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase)
-      })
-    }
+  openModal() {
+    /*const modalRef = this.modalService.open(ModalComponent);*/
   }
 }
 
