@@ -2,7 +2,7 @@ import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalComponent } from 'src/app/shared/modal/modal.component';
-
+import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
  
   constructor(
     private pokemonServices: PokeServiceService,
+    private modalService: NgbModal
     ) { }
 
   ngOnInit(): void {
@@ -59,8 +60,9 @@ export class HomeComponent implements OnInit {
       );
     }
   }
+
   openModal() {
-    /*const modalRef = this.modalService.open(ModalComponent);*/
+    const modalRef = this.modalService.open(ModalComponent, { size: 'ng' });
   }
 }
 
