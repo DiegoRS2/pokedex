@@ -1,14 +1,12 @@
 <div class="body">
     <div class="search">
-        <!-- input type="text" name="search" [(ngModel)]="searchText" autocomplete="off" -->
-
         <input type="text" class="form-control input" placeholder="Pesquisar" name="filtrar" [(ngModel)]="searchText" (Change)="filtrar(searchText)">
     </div>
     <mat-card class="home">
         <mat-card class="card"
             *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText">
             <div>
-                <img src="{{ p.sprites?.front_default }}" alt="imagens">
+                <img class="image" src="{{ p.sprites?.front_default }}" alt="imagens">
             </div>
             <div class="name">
                 <p>{{ p.id }} - &nbsp;</p>
