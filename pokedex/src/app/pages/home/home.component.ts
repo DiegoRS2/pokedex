@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   openModal() {
-    const modalRef = this.modalService.open(ModalComponent, { size: 'ng' });
+    this.modalService.open(ModalComponent, { size: 'ng' });
   }
 }
 
