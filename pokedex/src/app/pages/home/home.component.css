@@ -10,6 +10,7 @@
     }
     .body{
         background-color: #8c162a;
+        padding-bottom: 30px;
     }
     .search{
        padding:30px 65px 0px 65px;
@@ -60,7 +61,7 @@
         font-weight: 300;
     }
     .image{
-      animation: alternate 2s ease-in-out forwards;  
+      animation: animate 2s ease-in-out forwards;  
     }
     @keyframes animate{
         0%{
