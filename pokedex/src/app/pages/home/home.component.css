@@ -60,23 +60,7 @@
         font-size: 1rem;
         font-weight: 300;
     }
-    .image{
-      animation: animate 2s ease-in-out forwards;  
-    }
-    @keyframes animate{
-        0%{
-            transform: translateY(-800px);
-        }
-        60%{
-            transform: translateY(0);
-        }
-        80%{
-            transform: translateY(-100px);
-        }
-        100%{
-            transform: translateY(0);
-        }
-    }
+  
 
 
     
