@@ -6,14 +6,14 @@
         <mat-card class="card"
             *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText">
             <div>
-                <img class="image" src="{{ p.sprites?.front_default }}" alt="imagens">
+                <img src="{{ p.sprites?.front_default }}" alt="imagens">
             </div>
             <div class="name">
-                <p>{{ p.id }} - &nbsp;</p>
+                <h1>{{ p.id }} - &nbsp;</h1>
                 <h1>{{ p.name }}</h1>
             </div>
-            <div>
-                {{ p.types }}
+            <div *ngFor="let x of p.types" class="types">
+                {{ x.type.name }}
             </div>
 
             <div>
