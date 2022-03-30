@@ -1,3 +1,4 @@
+import { Types } from './../service/pokemon.model';
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   poke: number = 1;
   searchText!: string;
   pokefilter!: Pokemons[];
+  public types: Types[] = [];
  
   constructor(
     private pokemonServices: PokeServiceService,
