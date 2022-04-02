@@ -2,21 +2,49 @@
     font-family: pokemon; 
     src: url('\src\assets\Pokemon Solid.ttf');
 }
-.header{
-    height: 150px;
-    background-color: #232528;
-    display: flex;
-    align-items: center;
-}
-
 .title{
     font-size: 4rem;
     font-family: pokemon;
     color: #F7C508;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #3770A1;
+    margin: auto;
+    transform: 50%,50%;
+    position: absolute;
+} 
+.body{
+    background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+.img-rotate{
+    display: flex;
+    align-items: center;
+    animation: loading 2s linear infinite;
+    box-sizing: border-box;
+    width: 88%;
+    height: 100%;
+    align-items: center;
+    justify-content: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes loading {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.img{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
 }
