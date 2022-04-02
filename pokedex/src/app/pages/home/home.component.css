@@ -17,6 +17,7 @@
     }
     .search{
        padding:30px 65px 0px 65px;
+       z-index: 1;
     }
     .card{
         display: flex;
