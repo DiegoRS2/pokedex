@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule }  from  'ngx-pagination' ;
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { ModalComponent } from './shared/modal/modal.component';
+import { InformationsComponent } from './pages/informations/informations.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { ModalComponent } from './shared/modal/modal.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ModalComponent,
+    InformationsComponent,
   ],
   imports: [
     BrowserModule,
