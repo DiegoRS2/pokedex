@@ -3,7 +3,6 @@
         display: flex;
         margin:30px auto;
         flex-wrap: wrap;
-        background-color: #ced1c0;
         justify-content: space-between;
         border-radius: 15px;
         padding: 30px;
@@ -13,8 +12,8 @@
         background-position: center;
     }
     .body{
-        background-image: radial-gradient(circle at 120.44% 56.16%, #99ffff 0, #89ffff 12.5%, #7cfff8 25%, #72f2ea 37.5%, #6cd8d8 50%, #68bfc4 62.5%, #65a8b1 75%, #62959f 87.5%, #5f858f 100%);
         padding-bottom: 30px;
+        background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
     }
     .search{
        padding:30px 65px 0px 65px;
@@ -33,6 +32,7 @@
     }
     .pagination{
         display: flex;
+        flex-direction: column;
         margin: auto;
         font-weight: 500;
         font-size: 0.9rem;
