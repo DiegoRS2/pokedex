@@ -9,7 +9,7 @@
     </div>
     <mat-card class="home">
         <mat-card class="card"
-            *ngFor="let p of pokemon | paginate: { itemsPerPage: 18, currentPage: poke}  | filter:searchText">
+            *ngFor="let p of pokemon | paginate: { itemsPerPage: 16, currentPage: poke}  | filter:searchText">
             <div>
                 <img src="{{ p.sprites?.front_default }}" alt="imagens">
             </div>
