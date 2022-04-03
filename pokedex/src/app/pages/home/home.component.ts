@@ -1,8 +1,6 @@
-import { Types } from './../service/pokemon.model';
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
-import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +12,6 @@ export class HomeComponent implements OnInit {
   poke: number = 1;
   searchText!: string;
   pokefilter!: Pokemons[];
-  public types: Types[] = [];
  
   constructor(
     private pokemonServices: PokeServiceService,
@@ -40,9 +37,23 @@ export class HomeComponent implements OnInit {
       pokeInformation => {
         this.pokemonServices.apiGetPokemon(pokeInformation.url).subscribe(
           x => {
-            pokeInformation.sprites = x.sprites;
+            pokeInformation.url = x.url;
+            pokeInformation.abilities = x.abilities;
+            pokeInformation.forms = x.forms;
+            pokeInformation.game_indices = x.game_indices;
+            pokeInformation.height = x.height;
+            pokeInformation.held_items = x.held_items;
             pokeInformation.id = x.id;
+            pokeInformation.is_default = x.is_default;
+            pokeInformation.location_area_encounters=x.location_area_encounters;
+            pokeInformation.moves = x.moves;
+            pokeInformation.order = x.order;
+            pokeInformation.past_types = x.past_types;
+            pokeInformation.species = x.species;
+            pokeInformation.sprites = x.sprites;
+            pokeInformation.stats = x.stats;
             pokeInformation.types = x.types;
+            pokeInformation.weight = x.weight;
             this.filtrar(this.searchText);
           })
       })
