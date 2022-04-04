@@ -1,11 +1,9 @@
 <div class="body">
     <div class="search">
-
         <form >
             <input type="text" class="form-control input" placeholder="Pesquisar" name="filtrar" [(ngModel)]="searchText"
                 (Change)="filtrar(searchText)">
         </form>
-
     </div>
     <mat-card class="home">
         <mat-card class="card"
@@ -21,7 +19,7 @@
                 {{ x.type.name }}
             </div>
 
-            <div>
+            <div class="div-btn"> 
                 <button class="button" >Info</button>
             </div>
         </mat-card>
