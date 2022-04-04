@@ -34,8 +34,13 @@ export class Pokemons {
     ) {}
   }
   
-  export class Abilities {
+  export class Ability {
     constructor(public name: string, public url: string) {}
+  }
+  export class Abilities{
+    constructor(public ability: Ability){
+
+    }
   }
   
   export class Forms {

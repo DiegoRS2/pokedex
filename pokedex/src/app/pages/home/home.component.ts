@@ -1,6 +1,7 @@
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   pokemon: Pokemons[] = [];
   poke: number = 1;
   searchText!: string;
-  pokefilter!: Pokemons[];
- 
+  pokeFilter!: Pokemons[];
+
   constructor(
     private pokemonServices: PokeServiceService,
-    ) { }
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getPokemons();
-    this.filtrar(this.searchText)
   }
 
   public getPokemons() {
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
         this.pokemon = res.results;
         this.pokemon = this.pokemon;
         this.getInformation();
+        this.filtrar();
       }
     );
   }
@@ -45,7 +48,7 @@ export class HomeComponent implements OnInit {
             pokeInformation.held_items = x.held_items;
             pokeInformation.id = x.id;
             pokeInformation.is_default = x.is_default;
-            pokeInformation.location_area_encounters=x.location_area_encounters;
+            pokeInformation.location_area_encounters = x.location_area_encounters;
             pokeInformation.moves = x.moves;
             pokeInformation.order = x.order;
             pokeInformation.past_types = x.past_types;
@@ -54,22 +57,20 @@ export class HomeComponent implements OnInit {
             pokeInformation.stats = x.stats;
             pokeInformation.types = x.types;
             pokeInformation.weight = x.weight;
-            this.filtrar(this.searchText);
+            this.filtrar();
           })
       })
   }
 
-  filtrar(pokename: string) {
-    if (pokename) {
-      pokename = pokename.toUpperCase();
+  filtrar() {
+    const searchText = this.searchText?.toUpperCase();
+    this.pokeFilter = this.pokemon.filter(a =>
+      !searchText || a.name?.toUpperCase().includes(searchText)
+    );
+  }
 
-      this.pokefilter = this.pokefilter.filter(a =>
-        a.name.toUpperCase().indexOf(pokename) >= 0,
-        console.log(
-          this.searchText
-        )
-      );
-    }
+  navigation(id: number) {
+    this.router.navigate(['informations'], { queryParams: { id: id } })
   }
 }
 
