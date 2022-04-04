@@ -16,8 +16,7 @@
         background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
     }
     .search{
-       padding:30px 65px 0px 65px;
-       z-index: 1;
+       padding:0px 65px 0px 65px;
     }
     .card{
         display: flex;
@@ -37,17 +36,8 @@
         margin: auto;
         font-weight: 500;
         font-size: 0.9rem;
-        background-color:rgb(255, 255, 255,0.15); 
-        backdrop-filter: blur(0.3rem);
-        --webkit-backdrop-filter:blur(1rem);
-        color: black;
-        border-radius: 4px;
-        box-shadow: inset 0 5px 10px rgba(0,0,0,.1,) 0 2px 5px rgba(0, 0, 0, .5);
     }
-    .pagination:hover{
-        
-        text-shadow: 0 0 20px rgb(255,224,27), 0 0 20px rgb(255,224,27);
-    }
+
     .button {
         box-shadow:inset 0px 1px 0px 0px #f29c93;
         background-color:#f03c28;
@@ -73,9 +63,10 @@
     .name{
         display: flex;
         flex-direction: row;
-        margin: auto;
+        margin: 0 auto;
         align-items: center;
         width: auto;
+        padding: 10px 0px 0px 0px;
     }
     .name > h1 {
         font-size: 1.2rem;
@@ -87,4 +78,10 @@
         display: block;
         flex-direction: row;
         align-items: center;
+    }
+    form{
+        position: relative;
+    }
+    .div-btn{
+        padding: 20px 0px 0px 0px;
     }
