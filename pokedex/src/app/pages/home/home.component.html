@@ -13,7 +13,7 @@
                 </div>
                 <div class="name">
                     <h1>{{ p.id }} - &nbsp;</h1>
-                    <h1>{{ p.name }}</h1>
+                    <h1>{{ p.name | titlecase}}</h1>
                 </div>
                 <div *ngFor="let x of p.types" class="types">
                     {{ x.type.name }}
