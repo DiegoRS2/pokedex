@@ -8,7 +8,7 @@ import { Pokemons } from './pokemon.model';
 })
 export class PokeServiceService {
 
-  url = "https://pokeapi.co/api/v2/pokemon?limit=1126&offset=0";
+  url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=800";
   
   constructor(private http: HttpClient) { }
 
