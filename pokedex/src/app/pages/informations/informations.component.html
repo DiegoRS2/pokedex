@@ -1,4 +1,4 @@
-<mat-card class="body" >
+<mat-card class="body">
   <div class="name">
     <h2 class="name-information">{{pokemon.name | titlecase}} N°- {{pokemon.id}}</h2>
   </div>
@@ -42,12 +42,14 @@
       </mat-card>
     </div>
   </div>
-  <ol>
-    <li *ngFor="let a of pokemon.stats">
-      {{ a.stat.name }}
-      <strong>
-        {{ a.base_stat }}
-      </strong>
-    </li>
-  </ol>
+  <tr *ngFor="let a of pokemon.stats">
+    <td class="text-right font-weight-bold space" style="white-space:nowrap;"> {{ a.stat.name }}</td>
+    <td colspan="3">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
+          aria-valuenow="" aria-valuemin="0" aria-valuemax="255"><span>{{a.base_stat}}</span></div>
+      </div>
+    </td>
+  </tr>
+  <tr>
 </mat-card>
