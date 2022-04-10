@@ -1,11 +1,75 @@
 .body{
     width: 90%;
-  
     margin:30px auto;
     border-radius: 15px;
     padding: 30px;
 }
+.card-information{
+    min-height: 250px;
+    min-width: 500px;
+    background-color: #30A7D7;
+    border-radius: 5px;
+    padding: 15px;
+    margin: auto;
+}
+.name{
+    margin-bottom: 3%;
+}
+.name-information{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.informations{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .image{
     height: 200px;
     width: 150;
+}
+.height{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+.height-information{
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    font-weight: 300;
+}
+.Weight{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+.Weight-information{
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    font-weight: 300;
+}
+.ability{
+    color: white;
+    font-size: 1.2rem; 
+    margin-bottom: 2%; 
+}
+.ability-information{
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    font-weight: 300;
+}
+.types{
+    color: white;
+    font-size: 1.2rem; 
+    margin-bottom: 2%;  
+}
+.types-information{
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    font-weight: 300;
+    margin: 0;
 }
