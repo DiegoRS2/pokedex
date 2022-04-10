@@ -1,6 +1,31 @@
-<div clas="abilites" >
+<mat-card class="body">
+        <img
+        [src]="pokemon.sprites.front_default"
+        [alt]="pokemon.name"
+        class="image"
+      >
+      <section class="pokemon__names">
+        <h2 class="slideInRight">{{pokemon.name | titlecase}}</h2>
+      </section>
+ 
+     Habilidades
     <h1 *ngFor="let a of pokemon?.abilities">
-        {{ a.ability.name }}
+        {{ a.ability.name | titlecase}}
     </h1>
 
-</div>
+    
+     
+
+
+    <ol>
+        <li *ngFor="let value of pokemon.stats">
+            {{ value.stat.name }}
+
+          <strong>
+            {{ value.base_stat }}
+          </strong>
+        </li>
+      </ol>
+</mat-card>
+
+

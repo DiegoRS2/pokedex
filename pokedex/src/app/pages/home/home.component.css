@@ -12,8 +12,7 @@
         background-position: center;
     }
     .body{
-        padding-bottom: 30px;
-        background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
+        padding-bottom: 30px;    
     }
     .search{
        padding:0px 65px 0px 65px;

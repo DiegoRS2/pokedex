@@ -16,10 +16,10 @@
                     <h1>{{ p.name | titlecase}}</h1>
                 </div>
                 <div *ngFor="let x of p.types" class="types">
-                    {{ x.type.name }}
+                    {{ x.type.name | titlecase }}
                 </div>
                 <div class="div-btn">
-                    <button class="button" (click)="navigation(p.id)" >Info</button>
+                    <button class="button" (click)="navigation(p.id)">Info</button>
                 </div>
             </mat-card>
     </div>

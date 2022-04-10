@@ -10,27 +10,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InformationsComponent implements OnInit {
 
-  id!: number;  
-  pokemon!:Pokemons;
+  id!: number;
+  pokemon!: Pokemons;
 
   constructor(
     private pokeservice: PokeServiceService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getIdLink();
     this.getdetalhes();
   }
-  getdetalhes(){
+  getdetalhes() {
     const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
-    this.pokeservice.apiGetPokemon(url).subscribe(x=>{
+    this.pokeservice.apiGetPokemon(url).subscribe(x => {
       this.pokemon = x;
     })
-
   }
-  getIdLink(){
-    this.route.queryParams.subscribe(x =>{
+
+  getIdLink() {
+    this.route.queryParams.subscribe(x => {
       this.id = x['id'];
     })
   }

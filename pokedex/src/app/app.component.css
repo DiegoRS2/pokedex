@@ -1,0 +1,4 @@
+main{
+background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
+--webkit-backdrop-filter:blur(1rem);
+}

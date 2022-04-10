@@ -12,12 +12,7 @@
     transform: 50%,50%;
     position: absolute;
 } 
-.body{
-    background-image: url('\src\assets\starry-sky-gafd34d4cc_1280.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+
 .container{
     display: flex;
     align-items: center;
