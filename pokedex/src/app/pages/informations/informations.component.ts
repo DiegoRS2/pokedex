@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./informations.component.css']
 })
 export class InformationsComponent implements OnInit {
-
   id!: number;
   pokemon!: Pokemons;
 
