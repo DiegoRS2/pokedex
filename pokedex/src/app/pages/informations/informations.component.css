@@ -5,12 +5,16 @@
     padding: 30px;
 }
 .card-information{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     min-height: 250px;
     min-width: 400px;
     background-color: #30A7D7;
     border-radius: 5px;
     padding: 15px;
     margin: auto;
+    overflow: hidden;
 }
 .name{
     margin-bottom: 3%;
@@ -73,13 +77,6 @@
     font-weight: 300;
     margin: 0;
 }
-.progress-bar {
-    width: 400px;
-  }
-  
-  .progress-bar span {
-    padding-right: 5px;
-  }
-  .space{
-      padding: 0px 10px 0px 0px;
-  }
+.space{
+    padding: 0px 10px 0px 0px;
+}
