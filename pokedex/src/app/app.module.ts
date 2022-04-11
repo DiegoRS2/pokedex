@@ -11,7 +11,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule }  from  'ngx-pagination' ;
 import { FormsModule } from '@angular/forms';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { InformationsComponent } from './pages/informations/informations.component';
 import { RouterModule } from '@angular/router';
 
@@ -32,7 +31,6 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    Ng2SearchPipeModule,
     RouterModule
   ],
   providers: [],
