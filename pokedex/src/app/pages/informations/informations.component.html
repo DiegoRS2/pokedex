@@ -1,31 +1,31 @@
 <mat-card class="body">
   <div class="name">
-    <h2 class="name-information">{{pokemon.name | titlecase}} N°- {{pokemon.id}}</h2>
+    <h1 class="name-information">{{pokemon.name | titlecase}} N°- {{pokemon.id}}</h1>
   </div>
 
   <div class="informations">
     <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" class="image">
     <div>
       <mat-card class="card-information">
-        <div>
+        <div class="info-block">
           <div class="height">
-            height
+            <h2>height</h2>
           </div>
           <div class="height-information">
-            {{ pokemon.height }} m
+            {{ pokemon.height/10 }} m
           </div>
         </div>
         <div>
           <div class="Weight">
-            Weight
+            <h2>Weight</h2>
           </div>
           <div class="Weight-information">
-            {{ pokemon.weight }} kg
+            {{ pokemon.weight/100 }} kg
           </div>
         </div>
         <div>
           <div class="ability">
-            Habilidades
+            <h2>Habilidades</h2>
           </div>
           <div>
             <h1 *ngFor="let a of pokemon?.abilities" class="ability-information">
@@ -33,7 +33,7 @@
             </h1>
           </div>
           <div class="types">
-            types
+            <h2>types</h2>
           </div>
           <div *ngFor="let x of pokemon.types" class="types-information">
             {{ x.type.name | titlecase }}
@@ -45,11 +45,14 @@
   <tr *ngFor="let a of pokemon.stats">
     <td class="text-right font-weight-bold space" style="white-space:nowrap;"> {{ a.stat.name }}</td>
     <td colspan="3">
-      <div class="progress">
+      <div class="progress" style="width: 400px;">
         <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
-          aria-valuenow="" aria-valuemin="0" aria-valuemax="255"><span>{{a.base_stat}}</span></div>
+        [style.width]="a.base_stat" aria-valuenow="" aria-valuemin="0" aria-valuemax="255" >
+      
+      </div>
       </div>
     </td>
   </tr>
   <tr>
+    
 </mat-card>
