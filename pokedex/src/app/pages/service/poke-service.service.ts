@@ -7,7 +7,7 @@ import { Pokemons } from './pokemon.model';
   providedIn: 'root'
 })
 export class PokeServiceService {
-
+  baseUrl = "";
   url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=807";
   
   constructor(private http: HttpClient) { }
