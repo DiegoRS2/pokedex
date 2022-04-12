@@ -21,7 +21,7 @@
 }
 .name-information{
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 500;
     margin: auto;
     display: flex;
     align-items: center;
@@ -30,11 +30,11 @@
 .informations{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .image{
-    height: 200px;
-    width: 150;
+    height: 400px;
+    width: 400;
 }
 .height{
     color: white;
@@ -80,3 +80,7 @@
 .space{
     padding: 0px 10px 0px 0px;
 }
+.atribute{
+    font-size: 1rem;
+}
+
