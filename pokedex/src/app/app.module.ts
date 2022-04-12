@@ -13,6 +13,7 @@ import { NgxPaginationModule }  from  'ngx-pagination' ;
 import { FormsModule } from '@angular/forms';
 import { InformationsComponent } from './pages/informations/informations.component';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     HomeComponent,
     InformationsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[LoadingComponent]
 })
 export class AppModule { }
