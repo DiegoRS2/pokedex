@@ -25,7 +25,12 @@ export class InformationsComponent implements OnInit {
     const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
     this.pokeservice.apiGetPokemon(url).subscribe(x => {
       this.pokemon = x;
+      this.getImagePokemon();
     })
+  }
+  getImagePokemon(){
+    this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
+  
   }
 
   getIdLink() {
