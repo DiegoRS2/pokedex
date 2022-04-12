@@ -4,7 +4,7 @@
   </div>
 
   <div class="informations">
-    <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" class="image">
+    <img [src]="pokemon.sprites.spritesWorld " [alt]="pokemon.name" class="image">
     <div>
       <mat-card class="card-information">
         <div class="info-block">
@@ -42,13 +42,12 @@
       </mat-card>
     </div>
   </div>
-  <tr *ngFor="let a of pokemon.stats">
-    <td class="text-right font-weight-bold space" style="white-space:nowrap;"> {{ a.stat.name }}</td>
+  <tr *ngFor="let a of pokemon.stats" class="states">
+    <td class="text-right font-weight-bold space atribute" style="white-space:nowrap;"> {{ a.stat.name }}</td>
     <td colspan="3">
-      <div class="progress" style="width: 400px;">
+      <div class="progress" style="width: 500px;">
         <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
-        [style.width]="a.base_stat" aria-valuenow="" aria-valuemin="0" aria-valuemax="255" >
-      
+        [style.width]="a.base_stat + '%'" aria-valuenow="" aria-valuemin="0" aria-valuemax="300" >{{ a.base_stat }}
       </div>
       </div>
     </td>
