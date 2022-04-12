@@ -1,4 +1,6 @@
-<div class="body">
+
+<div class="body" *ngIf="!isLoading">
+    <app-loading [isLoading]="isLoading"></app-loading>
     <div class="search">
         <form >
             <input type="text" class="form-control input" autocomplete="off" placeholder="Pesquisar" name="filtrar" [(ngModel)]="searchText" (input)="filtrar()">
