@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  isLoading:boolean = true;
   pokemon: Pokemons[] = [];
   poke: number = 1;
   searchText!: string;
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
         this.pokemon = this.pokemon;
         this.getInformation();
         this.filtrar();
+        this.isLoading = false;
       }
     );
   }
