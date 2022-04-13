@@ -42,16 +42,18 @@
       </mat-card>
     </div>
   </div>
-  <tr *ngFor="let a of pokemon.stats" class="states">
-    <td class="text-right font-weight-bold space atribute" style="white-space:nowrap;"> {{ a.stat.name }}</td>
-    <td colspan="3">
-      <div class="progress" style="width: 500px;">
-        <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
-        [style.width]="a.base_stat + '%'" aria-valuenow="" aria-valuemin="0" aria-valuemax="300" >{{ a.base_stat }}
-      </div>
-      </div>
-    </td>
-  </tr>
-  <tr>
+  <div class="grafics">
+    <tr *ngFor="let a of pokemon.stats" class="states">
+      <td class="text-right font-weight-bold space atribute" style="white-space:nowrap;"> {{ a.stat.name }}</td>
+      <td colspan="3">
+        <div class="progress" style="width: 500px;">
+          <div class="progress-bar progress-bar-striped progress-bar-animated rounded-sm" role="progressbar"
+          [style.width]="a.base_stat + '%'" aria-valuenow="255" aria-valuemin="0" aria-valuemax="255" id="aling" >{{ a.base_stat }}
+        </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+  </div>
     
 </mat-card>
