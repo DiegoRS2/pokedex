@@ -1,7 +1,7 @@
 import { Pokemons } from './../service/pokemon.model';
 import { PokeServiceService } from './../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-informations',
@@ -15,7 +15,8 @@ export class InformationsComponent implements OnInit {
 
   constructor(
     private pokeservice: PokeServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -37,7 +38,7 @@ export class InformationsComponent implements OnInit {
   //     console.log(y);
   //   })
   // }
-  getImagePokemon(){
+  getImagePokemon() {
     this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
   }
 
@@ -45,5 +46,9 @@ export class InformationsComponent implements OnInit {
     this.route.queryParams.subscribe(x => {
       this.id = x['id'];
     })
+  }
+
+  home() {
+    this.router.navigate([''])
   }
 }

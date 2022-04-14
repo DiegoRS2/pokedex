@@ -1,15 +1,14 @@
-
 <div class="body" *ngIf="!isLoading">
     <app-loading [isLoading]="isLoading"></app-loading>
     <div class="search">
-        <form >
-            <input type="text" class="form-control input" autocomplete="off" placeholder="Pesquisar" name="filtrar" [(ngModel)]="searchText" (input)="filtrar()">
+        <form>
+            <input type="text" class="form-control input" autocomplete="off" placeholder="Pesquisar" name="filtrar"
+                [(ngModel)]="searchText" (input)="filtrar()">
         </form>
     </div>
-    <mat-card class="home d-flex flex-column">
-    <div class="w-100 d-flex flex-row flex-wrap">
-            <mat-card class="card"
-                *ngFor="let p of pokeFilter | paginate: { itemsPerPage: 16, currentPage: poke}">
+    <mat-card class="home">
+        <div class="cardCollection">
+            <mat-card class="card" *ngFor="let p of pokeFilter | paginate: { itemsPerPage: 16, currentPage: poke}">
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
                 </div>
@@ -24,8 +23,8 @@
                     <button class="button" (click)="navigation(p.id)">Info</button>
                 </div>
             </mat-card>
-    </div>
-        <div class="pagination " >
+        </div>
+        <div class="pagination ">
             <pagination-controls (pageChange)="poke = $event"></pagination-controls>
         </div>
     </mat-card>
