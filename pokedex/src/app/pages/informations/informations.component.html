@@ -1,4 +1,10 @@
+<div class="pokedex">
+  <h1 class="pokedex-title">Pokédex</h1>
+</div>
 <mat-card class="body">
+  <div>
+    <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
+  </div>
   <div class="name">
     <h1 class="name-information">{{pokemon.name | titlecase}} N°- {{pokemon.id}}</h1>
   </div>
@@ -18,7 +24,7 @@
           <h2>Weight</h2>
         </div>
         <div class="atribute">
-          {{ pokemon.weight/100 }} kg
+          {{ pokemon.weight/10 }} kg
         </div>
       </div>
       <div>
@@ -60,7 +66,9 @@
       <tr>
     </div>
   </div>
-  <div class="btn">
-    <button type="button" class="btn btn-primary" (click)="home()">Voltar ao ínicio</button>
+  <div class="navigation">
+    <button (click)="previousPokemon()" class="btn-navegation">Previous</button>
+    <button (click)="nextPokemon()" class="btn-navegation">Next</button>
   </div>
+
 </mat-card>

@@ -12,7 +12,7 @@ export class InformationsComponent implements OnInit {
   id!: number;
   pokemon!: Pokemons;
   poke!: Pokemons;
-
+  idSoma!: number;
   constructor(
     private pokeservice: PokeServiceService,
     private route: ActivatedRoute,
@@ -24,6 +24,28 @@ export class InformationsComponent implements OnInit {
     this.getdetalhes();
     //this.getSpecies();
   }
+  nextPokemon(){
+    this.id = 1 + Number(this.id)
+    const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
+    this.pokeservice.apiGetPokemon(url).subscribe(y => {
+    this.pokemon = y;
+    this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
+    })
+  }
+
+  previousPokemon(){
+    if(this.id > 0 ){
+    this.id = Number(this.id) - 1;
+    const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
+    this.pokeservice.apiGetPokemon(url).subscribe(y => {
+    this.pokemon = y;
+    this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
+    })}
+    else{
+      return
+    }
+  }
+
   getdetalhes() {
     const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
     this.pokeservice.apiGetPokemon(url).subscribe(x => {
@@ -38,6 +60,8 @@ export class InformationsComponent implements OnInit {
   //     console.log(y);
   //   })
   // }
+
+
   getImagePokemon() {
     this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
   }
