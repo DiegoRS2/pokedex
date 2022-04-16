@@ -28,10 +28,10 @@ export class HomeComponent implements OnInit {
 
   public getPokemons(type?: 'previous' | 'next') {
     let url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
-    if (type === 'next' && !!this.pokeApi.next) {
+    if (type === 'next' && !!this.pokeApi?.next) {
       url = this.pokeApi.next as string;
     }
-    else if (type === 'previous' && !!this.pokeApi.previous) {
+    else if (type === 'previous' && !!this.pokeApi?.previous) {
       url = this.pokeApi.previous as string
     }
     this.pokemonServices.apiListAllPokemons(url).subscribe(

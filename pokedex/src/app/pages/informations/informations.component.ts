@@ -22,7 +22,6 @@ export class InformationsComponent implements OnInit {
   ngOnInit(): void {
     this.getIdLink();
     this.getdetalhes();
-    //this.getSpecies();
   }
   nextPokemon(){
     this.id = 1 + Number(this.id)
@@ -53,14 +52,6 @@ export class InformationsComponent implements OnInit {
       this.getImagePokemon();
     })
   }
-  // getSpecies(){
-  //   const baseUrl= 'https://pokeapi.co/api/v2/pokemon-species';
-  //   this.pokeservice.apiGetPokemon(baseUrl).subscribe(y =>{
-  //     this.poke = y;
-  //     console.log(y);
-  //   })
-  // }
-
 
   getImagePokemon() {
     this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`

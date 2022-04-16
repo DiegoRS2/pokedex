@@ -6,7 +6,7 @@
     <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
   </div>
   <div class="name">
-    <h1 class="name-information">{{pokemon.name | titlecase}} N°- {{pokemon.id}}</h1>
+    <h1 class="name-information">{{pokemon?.name | titlecase}} N°- {{pokemon?.id}}</h1>
   </div>
 
   <div class="pokeInfo">
@@ -16,7 +16,7 @@
           <h2>Height</h2>
         </div>
         <div class="atribute">
-          {{ pokemon.height/10 }} m
+          {{ (!!pokemon?.height? pokemon.height : 0) /10}} m
         </div>
       </div>
       <div>
@@ -24,7 +24,7 @@
           <h2>Weight</h2>
         </div>
         <div class="atribute">
-          {{ pokemon.weight/10 }} kg
+          {{ (!!pokemon?.weight? pokemon.weight : 0) /10 }} kg
         </div>
       </div>
       <div>
@@ -33,30 +33,32 @@
         </div>
         <div>
           <h1 *ngFor="let a of pokemon?.abilities" class="atribute">
-            {{ a.ability.name | titlecase}}
+            {{ a.ability?.name | titlecase}}
           </h1>
         </div>
         <div class="atribute-title">
           <h2>types</h2>
         </div>
-        <div *ngFor="let x of pokemon.types" class="atribute">
-          {{ x.type.name | titlecase }}
+        <div *ngFor="let x of pokemon?.types" class="atribute">
+          {{ x.type?.name | titlecase }}
         </div>
       </div>
     </mat-card>
     <div class="pokeImg">
-      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt="" [class.red]="pokemon.types[0].type.name === 'normal'"> 
-      <img [src]="pokemon.sprites.spritesWorld " id="pokeSprite" [alt]="pokemon.name" class="image">
+      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt=""  
+      [class.red]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada') === 'normal'"> 
+      <img [src]="(!!pokemon? pokemon.sprites.spritesWorld : 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png' )" id="pokeSprite" [alt]="pokemon?.name" class="image">
     </div>
     <div class="grafics">
       <div class="grafInterior">
         <h2 class="status">Status</h2>
-        <div *ngFor="let a of pokemon.stats" class="states">
+        <div *ngFor="let a of pokemon?.stats" class="states">
           <span class="text-right font-weight-bold space atribute" style="white-space:nowrap;">
-            {{ a.stat.name | titlecase}}
+            {{ a.stat?.name | titlecase}}
           </span>
           <div class="progress" style="width: 200px;">
-            <div class="progress-bar bg-danger rounded-sm" role="progressbar" [style.width]="a.base_stat + '%'"
+            <div class="progress-bar bg-danger rounded-sm" role="progressbar" 
+            [style.width]="((a.base_stat)) + '%'"
               aria-valuenow="255" aria-valuemin="0" aria-valuemax="255" id="aling">
               {{a.base_stat }}
             </div>
