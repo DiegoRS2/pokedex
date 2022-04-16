@@ -130,7 +130,7 @@ h1{
     background-size: cover;
     background-position: center;
     z-index: 0;
-    filter : hue-rotate(50deg);
+  
 }
 
 .pokeImg #pokeSprite {
@@ -188,4 +188,8 @@ h1{
 .btn-navegation:hover{
     background-color: #B4EBFF;
     color: black;
+}
+
+.red{
+    filter : hue-rotate(100deg);
 }

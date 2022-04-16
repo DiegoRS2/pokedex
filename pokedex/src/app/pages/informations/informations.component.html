@@ -45,7 +45,7 @@
       </div>
     </mat-card>
     <div class="pokeImg">
-      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt="">
+      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt="" [class.red]="pokemon.types[0].type.name === 'normal'"> 
       <img [src]="pokemon.sprites.spritesWorld " id="pokeSprite" [alt]="pokemon.name" class="image">
     </div>
     <div class="grafics">

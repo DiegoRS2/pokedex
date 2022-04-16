@@ -1,5 +1,4 @@
-<app-loading [isLoading]="isLoading"></app-loading>
-<app-header ></app-header>
+<app-header></app-header>
 <div class="body">
     <div class="search">
         <form>
@@ -9,7 +8,7 @@
     </div>
     <mat-card class="home">
         <div class="cardCollection">
-            <mat-card class="card" *ngFor="let p of pokeFilter | paginate: { itemsPerPage: 16, currentPage: poke}">
+            <mat-card class="card" *ngFor="let p of pokeFilter">
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
                 </div>
@@ -25,9 +24,9 @@
                 </div>
             </mat-card>
         </div>
-        <div class="pagination ">
-            <pagination-controls (pageChange)="poke = $event"></pagination-controls>
+        <div>
+            <button class="btn-navegation" *ngIf="!!pokeApi.previous" (click)="getPokemons('previous')">Previous</button>
+            <button class="btn-navegation" *ngIf="!!pokeApi.next" (click)="getPokemons('next')">Next</button>
         </div>
     </mat-card>
-
 </div>

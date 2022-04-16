@@ -120,3 +120,10 @@ export class Pokemons {
       public url: string
     ) {}
   }
+
+  export class PokeApi{
+    public count?: number
+    public next?: string
+    public previous?: string
+    public results?: Pokemons[]
+  }

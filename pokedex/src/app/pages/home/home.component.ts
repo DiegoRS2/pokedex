@@ -1,3 +1,4 @@
+import { PokeApi } from './../service/pokemon.model';
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   poke: number = 1;
   searchText!: string;
   pokeFilter!: Pokemons[];
+  pokeApi!: PokeApi;
 
   constructor(
     private pokemonServices: PokeServiceService,
@@ -24,11 +26,18 @@ export class HomeComponent implements OnInit {
     this.getPokemons();
   }
 
-  public getPokemons() {
-    this.pokemonServices.apiListAllPokemons().subscribe(
+  public getPokemons(type?: 'previous' | 'next') {
+    let url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
+    if (type === 'next' && !!this.pokeApi.next) {
+      url = this.pokeApi.next as string;
+    }
+    else if (type === 'previous' && !!this.pokeApi.previous) {
+      url = this.pokeApi.previous as string
+    }
+    this.pokemonServices.apiListAllPokemons(url).subscribe(
       res => {
-        this.pokemon = res.results;
-        this.pokemon = this.pokemon;
+        this.pokeApi = res;
+        this.pokemon = res.results as Pokemons[];
         this.getInformation();
         this.filtrar();
         this.isLoading = false;
