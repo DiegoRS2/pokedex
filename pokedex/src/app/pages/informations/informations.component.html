@@ -1,7 +1,9 @@
 <div class="pokedex">
   <h1 class="pokedex-title">Pokédex</h1>
 </div>
-<mat-card class="body">
+<mat-card class="body"
+[class.backgrounfire]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fire'"
+>
   <div>
     <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
   </div>
