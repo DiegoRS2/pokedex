@@ -7,7 +7,7 @@ import { Pokemons, PokeApi } from './pokemon.model';
   providedIn: 'root'
 })
 export class PokeServiceService {
-  
+
   constructor(private http: HttpClient) { }
 
   apiListAllPokemons(url: string): Observable<PokeApi> {
