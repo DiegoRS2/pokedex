@@ -23,24 +23,25 @@ export class InformationsComponent implements OnInit {
     this.getIdLink();
     this.getdetalhes();
   }
-  nextPokemon(){
+  nextPokemon() {
     this.id = 1 + Number(this.id)
     const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
     this.pokeservice.apiGetPokemon(url).subscribe(y => {
-    this.pokemon = y;
-    this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
+      this.pokemon = y;
+      this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
     })
   }
 
-  previousPokemon(){
-    if(this.id != 1 ){
-    this.id = Number(this.id) - 1;
-    const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
-    this.pokeservice.apiGetPokemon(url).subscribe(y => {
-    this.pokemon = y;
-    this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
-    })}
-    else{
+  previousPokemon() {
+    if (this.id != 1) {
+      this.id = Number(this.id) - 1;
+      const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
+      this.pokeservice.apiGetPokemon(url).subscribe(y => {
+        this.pokemon = y;
+        this.pokemon.sprites.spritesWorld = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.id}.svg`
+      })
+    }
+    else {
       return
     }
   }
