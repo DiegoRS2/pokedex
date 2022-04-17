@@ -2,7 +2,6 @@
   <h1 class="pokedex-title">Pokédex</h1>
 </div>
 <mat-card class="body"
-[class.backgrounfire]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fire'"
 >
   <div>
     <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
@@ -89,7 +88,7 @@
     </div>
   </div>
   <div class="navigation">
-    <button (click)="previousPokemon()" class="btn-navegation">Previous</button>
-    <button (click)="nextPokemon()" class="btn-navegation">Next</button>
+    <div><button (click)="previousPokemon()" *ngIf="id > 1" class="btn-navegation">Previous</button></div>
+    <div><button (click)="nextPokemon()" class="btn-navegation">Next</button></div>
   </div>
 </mat-card>
