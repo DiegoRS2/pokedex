@@ -33,7 +33,7 @@ export class InformationsComponent implements OnInit {
   }
 
   previousPokemon(){
-    if(this.id > 0 ){
+    if(this.id != 1 ){
     this.id = Number(this.id) - 1;
     const url = `https://pokeapi.co/api/v2/pokemon/${this.id}`;
     this.pokeservice.apiGetPokemon(url).subscribe(y => {
