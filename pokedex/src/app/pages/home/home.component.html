@@ -26,11 +26,12 @@
         </div>
         <div class="navigation">
             <div>
-                <button class="button-navigation" *ngIf="!!pokeApi.previous"
-                    (click)="getPokemons('previous')">Page previous</button>
+                <button class="button-navigation" *ngIf="!!pokeApi.previous" (click)="getPokemons('previous')">Page
+                    previous</button>
             </div>
             <div>
-                <button class="button-navigation" *ngIf="!!pokeApi.next" (click)="getPokemons('next')">Next page</button>
+                <button class="button-navigation" *ngIf="!!pokeApi.next" (click)="getPokemons('next')">Next
+                    page</button>
             </div>
         </div>
     </mat-card>
