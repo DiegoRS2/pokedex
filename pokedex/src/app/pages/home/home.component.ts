@@ -10,9 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  isLoading: boolean = true;
   pokemon: Pokemons[] = [];
-  poke: number = 1;
   searchText!: string;
   pokeFilter!: Pokemons[];
   pokeApi!: PokeApi;
@@ -29,18 +27,19 @@ export class HomeComponent implements OnInit {
   public getPokemons(type?: 'previous' | 'next') {
     let url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20"
     if (type === 'next' && !!this.pokeApi?.next) {
-      url = this.pokeApi.next as string;
+      url = this.pokeApi?.next as string;
     }
+
     else if (type === 'previous' && !!this.pokeApi?.previous) {
-      url = this.pokeApi.previous as string
+      url = this.pokeApi?.previous as string
     }
+    
     this.pokemonServices.apiListAllPokemons(url).subscribe(
       res => {
         this.pokeApi = res;
         this.pokemon = res.results as Pokemons[];
         this.getInformation();
         this.filtrar();
-        this.isLoading = false;
       }
     );
   }
