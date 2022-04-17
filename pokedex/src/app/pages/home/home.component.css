@@ -124,7 +124,8 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
+    height: 40px;
+    font-size: 1rem;
     width: 200px;
     border-radius: 15px;
     background-color: #03588d;
