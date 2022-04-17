@@ -190,6 +190,74 @@ h1{
     color: black;
 }
 
-.red{
+.normal{
     filter : hue-rotate(100deg);
+}
+
+.fire{
+    filter: hue-rotate(172deg);
+}
+
+.water{
+    filter: hue-rotate(20deg);
+}
+
+.bug{
+    filter: hue-rotate(296deg);
+}
+
+.grass{
+    filter: hue-rotate(268deg); 
+}
+
+.electric{
+    filter: hue-rotate(-143deg);  
+}
+
+.ice{
+    filter: hue-rotate(338deg);   
+}
+
+.fighting{
+    filter: hue-rotate(186deg);  
+}
+
+.poison{
+    filter: hue-rotate(57deg); 
+}
+
+.ground{
+    filter: hue-rotate(211deg);  
+}
+
+.flying{
+    filter: hue-rotate(340deg); 
+}
+
+.psychic{
+    filter: hue-rotate(46deg);  
+}
+
+.rock{
+    filter: hue-rotate(203deg); 
+}
+
+.ghost{
+    filter: hue-rotate(76deg); 
+}
+
+.dragon{
+    filter: hue-rotate(29deg); 
+}
+
+.dark{
+    filter: hue-rotate(198deg);
+}
+
+.stell{
+    filter: hue-rotate(333deg);
+}
+
+.fairy{
+    filter: hue-rotate(101deg);
 }

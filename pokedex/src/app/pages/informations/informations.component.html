@@ -45,9 +45,26 @@
       </div>
     </mat-card>
     <div class="pokeImg">
-      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt=""  
-      [class.red]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada') === 'normal'"> 
-      <img [src]="(!!pokemon? pokemon.sprites.spritesWorld : 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png' )" id="pokeSprite" [alt]="pokemon?.name" class="image">
+      <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt="Pokemon"  
+      [class.normal]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada') ==='normal'"
+      [class.fire]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fire'"
+      [class.water]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='water'"
+      [class.grass]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='grass'"
+      [class.electric]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='electric'"
+      [class.ice]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='ice'"
+      [class.fighting]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fighting'"
+      [class.poison]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='poison'"
+      [class.flying]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='flying'"
+      [class.psychic]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='psychic'"
+      [class.bug]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='bug'"
+      [class.rock]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='rock'"
+      [class.ghost]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='ghost'"
+      [class.dragon]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='dragon'"
+      [class.dark]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='dark'"
+      [class.stell]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='stell'"
+      [class.fairy]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fairy'"
+      > 
+      <img [src]="(!!pokemon? pokemon.sprites.spritesWorld : 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/.png' )" id="pokeSprite" [alt]="pokemon?.name" class="image">
     </div>
     <div class="grafics">
       <div class="grafInterior">
@@ -58,7 +75,7 @@
           </span>
           <div class="progress" style="width: 200px;">
             <div class="progress-bar bg-danger rounded-sm" role="progressbar" 
-            [style.width]="((a.base_stat)) + '%'"
+            [style.width]="((a.base_stat*100)/170)+'%'"
               aria-valuenow="255" aria-valuemin="0" aria-valuemax="255" id="aling">
               {{a.base_stat }}
             </div>
@@ -72,5 +89,4 @@
     <button (click)="previousPokemon()" class="btn-navegation">Previous</button>
     <button (click)="nextPokemon()" class="btn-navegation">Next</button>
   </div>
-
 </mat-card>
