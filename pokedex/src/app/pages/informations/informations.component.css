@@ -193,7 +193,7 @@ h1{
 
 .normal{
     -webkit-filter: opacity(.5) drop-shadow(0 0 0 transparent);
-    filter: opacity(.5) drop-shadow(0 0 0 transparent);
+    filter: opacity(.1) drop-shadow(0 0 0 transparent);
 }
 
 .fire{
