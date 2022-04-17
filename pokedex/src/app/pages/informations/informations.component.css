@@ -192,7 +192,8 @@ h1{
 }
 
 .normal{
-    filter : hue-rotate(100deg);
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 transparent);
+    filter: opacity(.5) drop-shadow(0 0 0 transparent);
 }
 
 .fire{
@@ -208,7 +209,7 @@ h1{
 }
 
 .grass{
-    filter: hue-rotate(268deg); 
+    filter: hue-rotate(246deg); 
 }
 
 .electric{
