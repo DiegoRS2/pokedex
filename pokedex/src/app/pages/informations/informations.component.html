@@ -1,8 +1,7 @@
 <div class="pokedex">
   <h1 class="pokedex-title">Pokédex</h1>
 </div>
-<mat-card class="body"
->
+<mat-card class="body">
   <div>
     <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
   </div>
@@ -47,23 +46,23 @@
     </mat-card>
     <div class="pokeImg">
       <img src="\assets\fundo_detalhes.png" id="backgroundPoke" alt="Pokemon"
-        [class.normal]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada') ==='normal'"
-        [class.fire]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fire'"
-        [class.water]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='water'"
-        [class.grass]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='grass'"
-        [class.electric]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='electric'"
-        [class.ice]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='ice'"
-        [class.fighting]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fighting'"
-        [class.poison]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='poison'"
-        [class.flying]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='flying'"
-        [class.psychic]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='psychic'"
-        [class.bug]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='bug'"
-        [class.rock]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='rock'"
-        [class.ghost]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='ghost'"
-        [class.dragon]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='dragon'"
-        [class.dark]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='dark'"
-        [class.stell]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='stell'"
-        [class.fairy]="(!!pokemon? pokemon.types[0]?.type?.name : 'nada')==='fairy'">
+        [class.normal]="(!!pokemon? pokemon.types[0]?.type?.name : '') ==='normal'"
+        [class.fire]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fire'"
+        [class.water]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='water'"
+        [class.grass]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='grass'"
+        [class.electric]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='electric'"
+        [class.ice]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='ice'"
+        [class.fighting]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fighting'"
+        [class.poison]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='poison'"
+        [class.flying]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='flying'"
+        [class.psychic]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='psychic'"
+        [class.bug]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='bug'"
+        [class.rock]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='rock'"
+        [class.ghost]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='ghost'"
+        [class.dragon]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='dragon'"
+        [class.dark]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='dark'"
+        [class.stell]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='stell'"
+        [class.fairy]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fairy'">
       <img
         [src]="(!!pokemon? pokemon.sprites.spritesWorld : 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/.png' )"
         id="pokeSprite" [alt]="pokemon?.name" class="image">
