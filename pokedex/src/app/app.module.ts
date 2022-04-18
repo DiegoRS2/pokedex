@@ -27,7 +27,6 @@ import { RouterModule } from '@angular/router';
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,
-    NgxPaginationModule,
     FormsModule,
     RouterModule
   ],
