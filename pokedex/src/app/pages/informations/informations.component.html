@@ -3,7 +3,7 @@
 </div>
 <mat-card class="body">
   <div>
-    <button type="button" class="btn" (click)="home()">Voltar ao ínicio</button>
+    <button type="button" class="btn" (click)="home()">Back to start</button>
   </div>
   <div class="name">
     <h1 class="name-information">{{pokemon?.name | titlecase}} N°- {{pokemon?.id}}</h1>
@@ -29,7 +29,7 @@
       </div>
       <div>
         <div class="atribute-title">
-          <h2>Habilidades</h2>
+          <h2>skills</h2>
         </div>
         <div>
           <h1 *ngFor="let a of pokemon?.abilities" class="atribute">
