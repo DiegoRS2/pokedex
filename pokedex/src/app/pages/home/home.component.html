@@ -17,7 +17,20 @@
                     <h1>{{ p.name | titlecase}}</h1>
                 </div>
                 <div *ngFor="let x of p.types" class="types">
-                    {{ x.type.name | titlecase }}
+                    <div class="size-type" 
+                        [class.normal]="x.type.name ==='normal'" 
+                        [class.fire]="x.type.name ==='fire'"
+                        [class.water]="x.type.name ==='water'" [class.grass]="x.type.name ==='grass'"
+                        [class.electric]="x.type.name ==='electric'" [class.ice]="x.type.name ==='ice'"
+                        [class.fighting]="x.type.name ==='fighting'" [class.poison]="x.type.name ==='poison'"
+                        [class.ground]="x.type.name ==='ground'" [class.flying]="x.type.name ==='flying'"
+                        [class.psychic]="x.type.name ==='psychic'" [class.bug]="x.type.name ==='bug'"
+                        [class.rock]="x.type.name ==='rock'" [class.ghost]="x.type.name ==='ghost'"
+                        [class.dragon]="x.type.name ==='dragon'" [class.dark]="x.type.name ==='dark'"
+                        [class.steel]="x.type.name ==='steel'" [class.fairy]="x.type.name ==='fairy'">
+                        {{ x.type.name | titlecase }}
+                    </div>
+
                 </div>
                 <div class="div-btn">
                     <button class="button" (click)="navigation(p.id)">Info</button>
