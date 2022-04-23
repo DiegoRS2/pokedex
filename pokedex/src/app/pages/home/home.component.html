@@ -8,7 +8,7 @@
     </div>
     <mat-card class="home">
         <div class="cardCollection">
-            <mat-card class="card" *ngFor="let p of pokeFilter">
+            <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)">
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
                 </div>
@@ -31,9 +31,6 @@
                         {{ x.type.name | titlecase }}
                     </div>
 
-                </div>
-                <div class="div-btn">
-                    <button class="button" (click)="navigation(p.id)">Info</button>
                 </div>
             </mat-card>
         </div>
