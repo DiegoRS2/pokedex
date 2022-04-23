@@ -38,6 +38,7 @@
     background-color:rgb(255, 255, 255,0.15); 
     backdrop-filter: blur(1rem);
     --webkit-backdrop-filter:blur(1rem);
+    cursor: pointer;
 }
 
 .pagination{
@@ -47,31 +48,6 @@
     font-size: 1rem;
     border-radius: 15px;
     align-items: center;
-}
-
-.button {
-    box-shadow:inset 0px 1px 0px 0px #f29c93;
-    background-color:#f03c28;
-    border-radius:19px;
-    border:1px solid #d83526;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:9px 45px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #b23e35;
-}
-
-.button:hover {
-    background-color:#ce0100;
-}
-
-.button:active {
-    position:relative;
-    top:1px;
 }
 
 .name{
@@ -99,10 +75,6 @@
 
 form{
     position: relative;
-}
-
-.div-btn{
-    padding: 20px 0px 0px 0px;
 }
 
 input{
