@@ -40,7 +40,8 @@ export class HomeComponent implements OnInit {
     this.pokemonServices.apiListAllPokemons(url).subscribe(
       res => {
         this.pokeApi = res;
-        this.pokemon = res.results as Pokemons[];
+        this.pokemon.push(...res.results as Pokemons[])
+
         this.getInformation();
         this.filtrar();
       }
@@ -50,6 +51,11 @@ export class HomeComponent implements OnInit {
   getInformation() {
     this.pokemon.forEach(
       pokeInformation => {
+
+        if (!pokeInformation.url) {
+          return;
+        }
+
         this.pokemonServices.apiGetPokemon(pokeInformation.url).subscribe(
           x => {
             pokeInformation.url = x.url;
@@ -87,8 +93,8 @@ export class HomeComponent implements OnInit {
 
   onScroll(){ 
      if(this.notscrolly){
-      this.spinner.show();
       this.getPokemons('next');
+      console.log('teste');
      }
   }
 }
