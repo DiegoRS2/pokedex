@@ -7,7 +7,13 @@
         </form>
     </div>
     <mat-card class="home">
-        <div class="cardCollection">
+        <div class="cardCollection"
+        infiniteScroll 
+        [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="150"  
+        [fromRoot]="true" 
+        (scrolled)="onScroll()"
+        >
             <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)">
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
@@ -34,6 +40,22 @@
                 </div>
             </mat-card>
         </div>
+
+        <!-- <div class="row pb-5">
+            <div class=" col-md-12 p-5">
+                <ngx-spinner
+                    bdOpacity="0.9"
+                    bdColor=""
+                    size="default"
+                    color="#581f87"
+                    type="ball-pulse-sync"
+                    [fullScreen]="false"
+                >
+                </ngx-spinner>
+            </div>
+
+        </div> -->
+
         <div class="navigation">
             <div>
                 <button class="button-navigation" *ngIf="!!pokeApi?.previous" (click)="getPokemons('previous')">Page

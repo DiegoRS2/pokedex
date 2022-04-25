@@ -3,6 +3,7 @@ import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +15,12 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokeFilter!: Pokemons[];
   pokeApi!: PokeApi;
+  notscrolly = true;
 
   constructor(
     private pokemonServices: PokeServiceService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -80,6 +83,13 @@ export class HomeComponent implements OnInit {
 
   navigation(id: number) {
     this.router.navigate(['informations'], { queryParams: { id: id } })
+  }
+
+  onScroll(){ 
+     if(this.notscrolly){
+      this.spinner.show();
+      this.getPokemons('next');
+     }
   }
 }
 
