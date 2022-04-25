@@ -94,7 +94,6 @@ export class HomeComponent implements OnInit {
   onScroll(){ 
      if(this.notscrolly){
       this.getPokemons('next');
-      console.log('teste');
      }
   }
 }

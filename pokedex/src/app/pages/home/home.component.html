@@ -9,8 +9,8 @@
     <mat-card class="home">
         <div class="cardCollection"
         infiniteScroll 
-        [infiniteScrollDistance]="2"
-        [infiniteScrollThrottle]="150"  
+        [infiniteScrollDistance]="0.5"
+        [infiniteScrollThrottle]="2000"  
         [fromRoot]="true" 
         (scrolled)="onScroll()"
         >
@@ -39,32 +39,6 @@
 
                 </div>
             </mat-card>
-        </div>
-
-        <!-- <div class="row pb-5">
-            <div class=" col-md-12 p-5">
-                <ngx-spinner
-                    bdOpacity="0.9"
-                    bdColor=""
-                    size="default"
-                    color="#581f87"
-                    type="ball-pulse-sync"
-                    [fullScreen]="false"
-                >
-                </ngx-spinner>
-            </div>
-
-        </div> -->
-
-        <div class="navigation">
-            <div>
-                <button class="button-navigation" *ngIf="!!pokeApi?.previous" (click)="getPokemons('previous')">Page
-                    previous</button>
-            </div>
-            <div>
-                <button class="button-navigation" *ngIf="!!pokeApi?.next" (click)="getPokemons('next')">Next
-                    page</button>
-            </div>
         </div>
     </mat-card>
 </div>
