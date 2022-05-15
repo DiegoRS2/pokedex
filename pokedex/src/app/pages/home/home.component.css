@@ -131,6 +131,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-weight: 400;
 }
 
 form{
