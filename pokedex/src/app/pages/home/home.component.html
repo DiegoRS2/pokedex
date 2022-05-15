@@ -6,14 +6,16 @@
                 [(ngModel)]="searchText" (input)="filtrar()">
         </form>
     </div>
-    <mat-card class="home">
+    <div class="home">
         <div class="cardCollection"
         infiniteScroll 
         [infiniteScrollDistance]="1"
         [infiniteScrollThrottle]="1500"  
         [fromRoot]="true" 
         (scrolled)="onScroll()">
-            <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)">
+            <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)"
+            
+            >
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
                 </div>
@@ -39,5 +41,5 @@
                 </div>
             </mat-card>
         </div>
-    </mat-card>
+    </div>
 </div>
