@@ -12,8 +12,7 @@
         [infiniteScrollDistance]="1"
         [infiniteScrollThrottle]="1500"  
         [fromRoot]="true" 
-        (scrolled)="onScroll()"
-        >
+        (scrolled)="onScroll()">
             <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)">
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
