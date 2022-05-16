@@ -8,14 +8,31 @@
     </div>
     <div class="home">
         <div class="cardCollection"
-        infiniteScroll 
-        [infiniteScrollDistance]="1"
-        [infiniteScrollThrottle]="1500"  
-        [fromRoot]="true" 
-        (scrolled)="onScroll()">
+         infiniteScroll 
+         [infiniteScrollDistance]="1" 
+         [infiniteScrollThrottle]="1500"
+         [fromRoot]="true" (scrolled)="onScroll()">
+         
             <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)"
-            
-            >
+                [class.normal]="p.types[0].type.name === 'normal' "
+                [class.fire]="p.types[0].type.name === 'fire'"
+                [class.water]="p.types[0].type.name === 'water'"
+                [class.electric]="p.types[0].type.name === 'electric'"
+                [class.fighting]="p.types[0].type.name === 'fighting'"
+                [class.ground]="p.types[0].type.name === 'ground'"
+                [class.psychic]="p.types[0].type.name === 'psychic'"
+                [class.rock]="p.types[0].type.name === 'rock'"
+                [class.dragon]="p.types[0].type.name === 'dragon'"
+                [class.steel]="p.types[0].type.name === 'steel'"
+                [class.grass]="p.types[0].type.name === 'grass'"
+                [class.ice]="p.types[0].type.name === 'ice'"
+                [class.poison]="p.types[0].type.name === 'poison'"
+                [class.flying]="p.types[0].type.name === 'flying'"
+                [class.bug]="p.types[0].type.name === 'bug'"
+                [class.ghost]="p.types[0].type.name === 'ghost'"
+                [class.dark]="p.types[0].type.name === 'dark'"
+                [class.fairy]="p.types[0].type.name === 'fairy'"
+                >
                 <div>
                     <img src="{{ p.sprites?.front_default }}" alt="imagens">
                 </div>
@@ -24,17 +41,7 @@
                     <h1>{{ p.name | titlecase}}</h1>
                 </div>
                 <div *ngFor="let x of p.types" class="types">
-                    <div class="size-type" 
-                        [class.normal]="x.type.name ==='normal'" 
-                        [class.fire]="x.type.name ==='fire'"
-                        [class.water]="x.type.name ==='water'" [class.grass]="x.type.name ==='grass'"
-                        [class.electric]="x.type.name ==='electric'" [class.ice]="x.type.name ==='ice'"
-                        [class.fighting]="x.type.name ==='fighting'" [class.poison]="x.type.name ==='poison'"
-                        [class.ground]="x.type.name ==='ground'" [class.flying]="x.type.name ==='flying'"
-                        [class.psychic]="x.type.name ==='psychic'" [class.bug]="x.type.name ==='bug'"
-                        [class.rock]="x.type.name ==='rock'" [class.ghost]="x.type.name ==='ghost'"
-                        [class.dragon]="x.type.name ==='dragon'" [class.dark]="x.type.name ==='dark'"
-                        [class.steel]="x.type.name ==='steel'" [class.fairy]="x.type.name ==='fairy'">
+                    <div class="size-type">
                         {{ x.type.name | titlecase }}
                     </div>
 
