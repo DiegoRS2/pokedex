@@ -1,6 +1,6 @@
 main{
-    background: #E5E5E5;
-    
+    background: #EFEFBB;
+    background: linear-gradient(to right, rgb(206, 246, 253), rgb(255, 224, 250));
 }
 
 
