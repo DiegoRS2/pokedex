@@ -45,10 +45,24 @@
     justify-content: center;
 } */
 
+@font-face {
+    font-family: pokemon; 
+    src: url('\src\assets\Pokemon Solid.ttf');
+}
+.title{
+    font-size: 5rem;
+    font-family: pokemon;
+    color: #F7C508;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #3770A1;
+    margin: auto;
+    transform: 50%,50%;
+    position: absolute;
+} 
+
 .header{
-    height: 100px;
+    height: 150px;
     width: 100%;
-    background-color: black;
     margin: 0px 0px 0px 0px;
     display: flex;
     justify-content: center;
@@ -59,3 +73,4 @@ h1{
     color: white;
     font-size: 80px;
 }
+

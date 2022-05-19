@@ -40,7 +40,6 @@ export class Ability {
 }
 export class Abilities {
   constructor(public ability: Ability) {
-
   }
 }
 

@@ -1,4 +1,253 @@
 .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.limit{
+    padding: 5%;
+}
+
+.limit-informations{
+    padding: 5% 13% 8% 13%;
+}
+
+.btn{
+    min-height: 50px;
+    min-width: 300px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #b3eafe;
+    text-shadow: 0 0 5px #b3eafe, 0 0 5px #b3eafe;
+    border: 2px solid #b3eafe;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover{
+    background-color: #B4EBFF;
+    color: black;
+}
+
+.card-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 40rem; 
+  width: 25rem; 
+  margin: 3%;
+  background-color:rgb(255, 255, 255,0.15); 
+  backdrop-filter: blur(0rem);
+  --webkit-backdrop-filter:blur(0.1rem);
+  border-radius: 10px;
+}
+
+img{
+    height: 20rem;
+}
+
+.title > h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+hr{
+    color: white;
+}
+
+.id-type{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.id{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#type{
+    color: black;
+    font-weight: 500;
+    font-size: 1.2;
+    height: 30px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card-right{
+    width: 50rem;
+    height: 40rem;
+    background-color:rgb(255, 255, 255,0.15); 
+    backdrop-filter: blur(0rem);
+    --webkit-backdrop-filter:blur(0.1rem);
+    border-radius: 10px;
+}
+
+.alingn-atribute{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.atribute{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: Rockwell;
+}
+
+.value-atribute{
+    color: white;
+    font-size: 1.8rem;
+    font-family: Rockwell;
+}
+
+.grafics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.grafics h2 {
+    color: #fff;
+}
+
+.fire{
+    background-color: #FF6900;
+}
+
+.water{
+    background-color: #14B9FF;
+}
+
+.bug{
+    background-color: #46C846;
+}
+
+.grass{
+    background-color: #B4F000;
+}
+
+.electric{
+    background-color: #FFE100; 
+}
+
+.ice{
+    background-color: #14F5FF;  
+}
+
+.fighting{
+    background-color: #DC6900; 
+}
+
+.poison{
+    background-color: #D28CD2;
+}
+
+.ground{
+    background-color: #FAC85A; 
+}
+
+.flying{
+    background-color: #78DCFF; 
+}
+
+.psychic{
+    background-color: #F08CDC; 
+}
+
+.rock{
+    background-color: #09141E;
+}
+
+.ghost{
+    background-color: #B48C64;
+}
+
+.dragon{
+    background-color: #5078DC;
+}
+
+.dark{
+    background-color: #787878;
+}
+
+.stell{
+    background-color: #AAC8F0;
+}
+
+.fairy{
+    background-color: #FFAFDC;
+}
+.normal{
+    background-color: #DCDCDC;
+}
+
+.navigation{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.btn-navegation{
+    min-height: 50px;
+    min-width: 300px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #b3eafe;
+    text-shadow: 0 0 5px #b3eafe, 0 0 5px #b3eafe;
+    border: 2px solid #b3eafe;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 30px 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-navegation:hover{
+    background-color: #B4EBFF;
+    color: black;
+}
+
+.icoN{
+    margin-left: 7px;
+}
+
+.ico{
+    margin-right: 7px;
+}
+
+
+
+
+
+/* .body{
     width: 90%;
     margin:30px auto;
     border-radius: 15px;
@@ -265,4 +514,4 @@ h1{
 }
 
 
-
+ */

@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { InfiniteScrollModule }  from  'ngx-infinite-scroll' ;
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgxSpinnerModule } from "ngx-spinner";
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     FormsModule,
     RouterModule,
     InfiniteScrollModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
