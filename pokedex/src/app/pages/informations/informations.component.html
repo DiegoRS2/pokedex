@@ -18,10 +18,10 @@
 
       <div class="id-type">
         <span class="id">
-          <h2>N°- 00{{pokemon?.id}}</h2>
+          <h2>N°- {{pokemon?.id}}</h2>
         </span>
         <span *ngFor="let x of pokemon?.types" id="type"
-        [class.normal]="(!!pokemon? pokemon.types[0]?.type?.name : '') ==='normal'"
+        [class.normal]="(!!pokemon? x.type?.name : '') ==='normal'"
         [class.fire]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fire'"
         [class.water]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='water'"
         [class.grass]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='grass'"
@@ -29,7 +29,7 @@
         [class.ice]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='ice'"
         [class.fighting]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fighting'"
         [class.poison]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='poison'"
-        [class.flying]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='flying'"
+        [class.flying]="(!!pokemon? x.type?.name : '')==='flying'"
         [class.psychic]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='psychic'"
         [class.bug]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='bug'"
         [class.rock]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='rock'"
