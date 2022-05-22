@@ -18,26 +18,26 @@
 
       <div class="id-type">
         <span class="id">
-          <h2>N°- {{pokemon?.id}}</h2>
+          <h2>N°- {{ pokemon?.id }}</h2>
         </span>
         <span *ngFor="let x of pokemon?.types" id="type"
         [class.normal]="(!!pokemon? x.type?.name : '') ==='normal'"
-        [class.fire]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fire'"
-        [class.water]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='water'"
-        [class.grass]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='grass'"
-        [class.electric]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='electric'"
-        [class.ice]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='ice'"
-        [class.fighting]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fighting'"
-        [class.poison]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='poison'"
+        [class.fire]="(!!pokemon? x.type?.name : '')==='fire'"
+        [class.water]="(!!pokemon? x.type?.name : '')==='water'"
+        [class.grass]="(!!pokemon? x.type?.name : '')==='grass'"
+        [class.electric]="(!!pokemon? x.type?.name : '')==='electric'"
+        [class.ice]="(!!pokemon? x.type?.name : '')==='ice'"
+        [class.fighting]="(!!pokemon? x.type?.name : '')==='fighting'"
+        [class.poison]="(!!pokemon? x.type?.name : '')==='poison'"
         [class.flying]="(!!pokemon? x.type?.name : '')==='flying'"
-        [class.psychic]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='psychic'"
-        [class.bug]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='bug'"
-        [class.rock]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='rock'"
-        [class.ghost]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='ghost'"
-        [class.dragon]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='dragon'"
-        [class.dark]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='dark'"
-        [class.stell]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='stell'"
-        [class.fairy]="(!!pokemon? pokemon.types[0]?.type?.name : '')==='fairy'"
+        [class.psychic]="(!!pokemon? x.type?.name : '')==='psychic'"
+        [class.bug]="(!!pokemon? x.type.name : '')==='bug'"
+        [class.rock]="(!!pokemon? x.type?.name : '')==='rock'"
+        [class.ghost]="(!!pokemon? x.type?.name : '')==='ghost'"
+        [class.dragon]="(!!pokemon? x.type?.name : '')==='dragon'"
+        [class.dark]="(!!pokemon? x.type.name : '')==='dark'"
+        [class.stell]="(!!pokemon? x.type?.name : '')==='stell'"
+        [class.fairy]="(!!pokemon? x.type?.name : '')==='fairy'"
         >
           {{ x.type?.name | titlecase }}
         </span>

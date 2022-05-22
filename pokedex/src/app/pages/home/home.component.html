@@ -1,47 +1,57 @@
 <div class="body">
     <div class="search">
         <form>
-            <input type="text" class="form-control input" autocomplete="off" placeholder="Pesquisar" name="filtrar"
+            <input type="text" class="form-control input" autocomplete="off" placeholder="Search" name="filtrar"
                 [(ngModel)]="searchText" (input)="filtrar()">
         </form>
     </div>
     <div class="home">
-        <div class="cardCollection"
-         infiniteScroll 
-         [infiniteScrollDistance]="1" 
-         [infiniteScrollThrottle]="1500"
-         [fromRoot]="true" (scrolled)="onScroll()">
-         
+        <div class="cardCollection" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1500"
+            [fromRoot]="true" (scrolled)="onScroll()">
+
             <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)"
-                [class.normal]="p.types[0].type.name === 'normal' "
-                [class.fire]="p.types[0].type.name === 'fire'"
-                [class.water]="p.types[0].type.name === 'water'"
-                [class.electric]="p.types[0].type.name === 'electric'"
+                [class.normal]="p.types[0].type.name === 'normal' " [class.fire]="p.types[0].type.name === 'fire'"
+                [class.water]="p.types[0].type.name === 'water'" [class.electric]="p.types[0].type.name === 'electric'"
                 [class.fighting]="p.types[0].type.name === 'fighting'"
-                [class.ground]="p.types[0].type.name === 'ground'"
-                [class.psychic]="p.types[0].type.name === 'psychic'"
-                [class.rock]="p.types[0].type.name === 'rock'"
-                [class.dragon]="p.types[0].type.name === 'dragon'"
-                [class.steel]="p.types[0].type.name === 'steel'"
-                [class.grass]="p.types[0].type.name === 'grass'"
-                [class.ice]="p.types[0].type.name === 'ice'"
-                [class.poison]="p.types[0].type.name === 'poison'"
-                [class.flying]="p.types[0].type.name === 'flying'"
-                [class.bug]="p.types[0].type.name === 'bug'"
-                [class.ghost]="p.types[0].type.name === 'ghost'"
-                [class.dark]="p.types[0].type.name === 'dark'"
-                [class.fairy]="p.types[0].type.name === 'fairy'"
-                >
+                [class.ground]="p.types[0].type.name === 'ground'" [class.psychic]="p.types[0].type.name === 'psychic'"
+                [class.rock]="p.types[0].type.name === 'rock'" [class.dragon]="p.types[0].type.name === 'dragon'"
+                [class.steel]="p.types[0].type.name === 'steel'" [class.grass]="p.types[0].type.name === 'grass'"
+                [class.ice]="p.types[0].type.name === 'ice'" [class.poison]="p.types[0].type.name === 'poison'"
+                [class.flying]="p.types[0].type.name === 'flying'" [class.bug]="p.types[0].type.name === 'bug'"
+                [class.ghost]="p.types[0].type.name === 'ghost'" [class.dark]="p.types[0].type.name === 'dark'"
+                [class.fairy]="p.types[0].type.name === 'fairy'">
                 <div>
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{ p.id.toString().padStart(3,'0') }}.png" alt="imagens">
+                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{ p.id.toString().padStart(3,'0') }}.png"
+                        alt="imagens">
                 </div>
                 <div class="name">
                     <h1>{{ p.id }} - &nbsp;</h1>
                     <h1>{{ p.name | titlecase}}</h1>
                 </div>
-                <div *ngFor="let x of p.types" class="types">
-                    <div class="size-type">
-                        {{ x.type.name | titlecase }}
+
+                <div class="div-type">
+                    <div *ngFor="let x of p.types" class="types">
+                        <div class="size-type" 
+                            [class.normal-type]="x.type.name ==='normal'"
+                            [class.fire-type]="x.type.name ==='fire'" 
+                            [class.water-type]="x.type.name ==='water'"
+                            [class.grass-type]="x.type.name ==='grass'"
+                            [class.electric-type]="x.type.name ==='electric'" 
+                            [class.ice-type]="x.type.name ==='ice'"
+                            [class.fighting-type]="x.type.name ==='fighting'"
+                            [class.poison-type]="x.type.name ==='poison'" 
+                            [class.ground-type]="x.type.name ==='ground'"
+                            [class.flying-type]="x.type.name ==='flying'"
+                            [class.psychic-type]="x.type.name ==='psychic'" 
+                            [class.bug-type]="x.type.name ==='bug'"
+                            [class.rock-type]="x.type.name ==='rock'" 
+                            [class.ghost-type]="x.type.name ==='ghost'"
+                            [class.dragon-type]="x.type.name ==='dragon'" 
+                            [class.dark-type]="x.type.name ==='dark'"
+                            [class.steel-type]="x.type.name ==='steel'" 
+                            [class.fairy-type]="x.type.name ==='fairy'">
+                            {{ x.type.name | titlecase }}
+                        </div>
                     </div>
 
                 </div>
