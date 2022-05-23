@@ -171,11 +171,11 @@ input{
   }
   
   .fire {
-    background-color: #FDDFDF;
+    background-image: linear-gradient(to bottom, #fddfdf, #fadcde, #f7dadc, #f3d7db, #f0d5d9);
   }
   
   .grass {
-    background-color: #DEFDE0;
+    background-image: linear-gradient(to bottom, #defde0, #d3f6cc, #cbefb7, #c6e7a0, #c3de88);
   }
   
   .electric {
@@ -199,11 +199,11 @@ input{
   }
   
   .poison {
-    background-color: #c4add6;
+    background-color: #D7BDEB;
   }
   
   .bug {
-    background-color: #f8d5a3;
+    background-color: #DEFDE0;
   }
   
   .dragon {
@@ -211,7 +211,7 @@ input{
   }
   
   .psychic {
-    background-color: #eaeda1;
+    background-image: linear-gradient(to bottom, #f4c5ea, #f5c7ec, #f6c9ee, #f8cbef, #f9cdf1);
   }
   
   .flying {
@@ -302,7 +302,7 @@ input{
     background-color: #787878;
 }
 
-.stell-type{
+.steel-type{
     background-color: #AAC8F0;
 }
 

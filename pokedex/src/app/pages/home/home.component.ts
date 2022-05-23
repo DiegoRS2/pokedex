@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokeFilter!: Pokemons[];
   pokeApi!: PokeApi;
-  notscrolly = true;
 
   constructor(
     private pokemonServices: PokeServiceService,
@@ -92,9 +91,8 @@ export class HomeComponent implements OnInit {
   }
 
   onScroll(){ 
-     if(this.notscrolly){
+      this.spinner.show();
       this.getPokemons('next');
-     }
   }
 }
 

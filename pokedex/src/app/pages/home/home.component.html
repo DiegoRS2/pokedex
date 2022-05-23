@@ -2,7 +2,7 @@
     <div class="search">
         <form>
             <input type="text" class="form-control input" autocomplete="off" placeholder="Search" name="filtrar"
-                [(ngModel)]="searchText" (input)="filtrar()">
+                [(ngModel)]="searchText" (input)="filtrar()"><mat-icon>search</mat-icon>
         </form>
     </div>
     <div class="home">
@@ -53,7 +53,6 @@
                             {{ x.type.name | titlecase }}
                         </div>
                     </div>
-
                 </div>
             </mat-card>
         </div>
