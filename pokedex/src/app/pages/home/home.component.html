@@ -6,7 +6,7 @@
         </form>
     </div>
     <div class="home">
-        <div class="cardCollection" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1500"
+        <div class="cardCollection" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="2000"
             [fromRoot]="true" (scrolled)="onScroll()">
 
             <mat-card class="card" *ngFor="let p of pokeFilter" (click)="navigation(p.id)"
@@ -55,6 +55,10 @@
                     </div>
                 </div>
             </mat-card>
+        </div>
+        <div class="loading" *ngIf="loading">
+            <img class="loading" src="\assets\loading.png" alt="">
+            <h2>Loading...</h2>
         </div>
     </div>
 </div>

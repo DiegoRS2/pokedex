@@ -3,7 +3,6 @@ import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +14,11 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokeFilter!: Pokemons[];
   pokeApi!: PokeApi;
+  loading:boolean = false;
 
   constructor(
     private pokemonServices: PokeServiceService,
     private router: Router,
-    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -91,6 +90,7 @@ export class HomeComponent implements OnInit {
   }
 
   onScroll(){ 
+    this.loading = true;
       this.getPokemons('next');
   }
 }
