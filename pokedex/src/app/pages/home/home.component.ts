@@ -91,7 +91,6 @@ export class HomeComponent implements OnInit {
   }
 
   onScroll(){ 
-      this.spinner.show();
       this.getPokemons('next');
   }
 }

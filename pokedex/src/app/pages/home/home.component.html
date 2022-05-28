@@ -2,7 +2,7 @@
     <div class="search">
         <form>
             <input type="text" class="form-control input" autocomplete="off" placeholder="Search" name="filtrar"
-                [(ngModel)]="searchText" (input)="filtrar()">
+                [(ngModel)]="searchText" (input)="filtrar()"><img class="image-search" src="\assets\icons8-pesquisar-48.png" alt="Pesquisar">
         </form>
     </div>
     <div class="home">
@@ -21,7 +21,7 @@
                 [class.ghost]="p.types[0].type.name === 'ghost'" [class.dark]="p.types[0].type.name === 'dark'"
                 [class.fairy]="p.types[0].type.name === 'fairy'">
                 <div>
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{ p.id.toString().padStart(3,'0') }}.png"
+                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{ p.id.toString().padStart(3, '0')}}.png"
                         alt="imagens">
                 </div>
                 <div class="name">

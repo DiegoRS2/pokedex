@@ -195,8 +195,7 @@ input{
   }
   
   .rock {
-    background-image: linear-gradient(to top, #d5d5d4, #dbdad9, #e0dfdf, #e4e4e4, #e9e9e9);
-  }
+    background-image: linear-gradient(to top, #dcb187, #e5be97, #eecba8, #f6d8b9, #ffe5ca);  }
   
   .fairy {
     background-image: linear-gradient(to top, #f0bbf9, #efc6fa, #eed1fa, #efdbfa, #f0e5f8);
@@ -313,3 +312,10 @@ input{
 .fairy-type{
     background-color: #FFAFDC;
 }
+
+  .image-search{
+    position:relative;
+    z-index:10;
+    width: 3%;
+    transform: translate(-115%, 0%);
+  }
