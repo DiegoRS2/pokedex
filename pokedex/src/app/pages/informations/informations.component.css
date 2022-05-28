@@ -43,13 +43,22 @@ button{
   align-items: center;
   margin: auto;
   flex: 1 1 150px;
-  height: 40rem; 
+  height: 42rem; 
   width: 28rem; 
   background-color:rgb(255, 255, 255,0.15); 
   backdrop-filter: blur(0rem);
   --webkit-backdrop-filter:blur(0.1rem);
   border-radius: 10px;
   margin-right: 40px;
+}
+
+.card-right{
+    width: 50rem;
+    height: 42rem;
+    background-color:rgb(255, 255, 255,0.15); 
+    backdrop-filter: blur(0rem);
+    --webkit-backdrop-filter:blur(0.1rem);
+    border-radius: 10px;
 }
 
 img{
@@ -91,15 +100,6 @@ hr{
     font-family: Rockwell;
     color: white;
     font-size: 1.2rem;
-}
-
-.card-right{
-    width: 50rem;
-    height: 40rem;
-    background-color:rgb(255, 255, 255,0.15); 
-    backdrop-filter: blur(0rem);
-    --webkit-backdrop-filter:blur(0.1rem);
-    border-radius: 10px;
 }
 
 .alingn-atribute{
@@ -263,4 +263,8 @@ hr{
 .stat{
     color:white;
     font-size: 1rem;
+}
+
+.progress{
+    margin-bottom: 5px;
 }
