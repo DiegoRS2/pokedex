@@ -31,13 +31,11 @@
 }
 
 .card:hover{
-    -webkit-animation: swing 1s ease;
-    animation: swing 1.5s ease;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1; 
+  transform: scale(1.02);
+  transition: transform .2s;
 }
 
-@-webkit-keyframes swing
+/* @-webkit-keyframes swing
 {
     15%
     {
@@ -102,7 +100,7 @@
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
-}
+} */
 
 .name{
     display: flex;
@@ -316,6 +314,6 @@ input{
   .image-search{
     position:relative;
     z-index:10;
-    width: 3%;
-    transform: translate(-115%, 0%);
+    height: 30px;
+    transform: translate(-125%, 0%);
   }
