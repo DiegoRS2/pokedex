@@ -11,8 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 15px;
-    padding: 30px;
-   
+    padding: 30px;   
 }
 
 .body{
@@ -34,8 +33,7 @@
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
-  transition: transform .2s;
-  box-shadow: 5px 5px 5px rgb(5, 5, 5);
+    transition: transform .2s;
 }
 
 .name{
@@ -49,7 +47,6 @@
 
 .name > h1 {
     font-size: 1.4rem;
-   
     margin: 0;
     padding: 0;
     color: black;
@@ -102,13 +99,6 @@ input{
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
-}
-
-img{
-  -webkit-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-  transition: transform .2s;
 }
 
 .steel {
@@ -177,10 +167,8 @@ img{
 .div-type{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
-
 
 .normal-type{
     background-color: #adacac;
