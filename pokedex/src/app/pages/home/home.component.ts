@@ -1,3 +1,4 @@
+import { forkJoin, Observable } from 'rxjs';
 import { PokeApi } from './../service/pokemon.model';
 import { Pokemons, } from '../service/pokemon.model';
 import { PokeServiceService } from '../service/poke-service.service';
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
   searchText!: string;
   pokeFilter!: Pokemons[];
   pokeApi!: PokeApi;
-  loading:boolean = false;
+  loading = false;
+  isLoading = true;
 
   constructor(
     private pokemonServices: PokeServiceService,
@@ -34,16 +36,46 @@ export class HomeComponent implements OnInit {
     else if (type === 'previous' && !!this.pokeApi?.previous) {
       url = this.pokeApi?.previous as string
     }
-    
+
     this.pokemonServices.apiListAllPokemons(url).subscribe(
       res => {
         this.pokeApi = res;
         this.pokemon.push(...res.results as Pokemons[])
 
-        this.getInformation();
-        this.filtrar();
+        // this.getInformation();
+
+        this.getPokemon().subscribe(p => {
+        let index = 0;
+        for (let i = this.pokemon.length - 20; i < this.pokemon.length; i++) {
+            let pokeId = Number.parseInt(this.pokemon[i].url
+              .replace('https://pokeapi.co/api/v2/pokemon/', '')
+              .replace('/', ''));
+           
+            this.pokemon[i].types = p[index].types;
+            this.pokemon[i].abilities = p[index].abilities;
+            this.pokemon[i].forms = p[index].forms;
+            this.pokemon[i].game_indices = p[index].game_indices;
+            this.pokemon[i].height = p[index].height;
+            this.pokemon[i].held_items = p[index].held_items;
+            this.pokemon[i].id = p[index].id;
+            this.pokemon[i].is_default = p[index].is_default;
+            this.pokemon[i].location_area_encounters = p[index].location_area_encounters;
+            this.pokemon[i].moves = p[index].moves;
+            this.pokemon[i].order = p[index].order;
+            this.pokemon[i].past_types = p[index].past_types;
+            this.pokemon[i].species = p[index].species;
+            this.pokemon[i].sprites = p[index].sprites;
+            this.pokemon[i].stats = p[index].stats;
+            this.pokemon[i].weight = p[index].weight;
+            index ++
+          }
+          this.filtrar();
+          this.isLoading = false;
+        });
+
       }
     );
+
   }
 
   getInformation() {
@@ -73,9 +105,11 @@ export class HomeComponent implements OnInit {
             pokeInformation.stats = x.stats;
             pokeInformation.types = x.types;
             pokeInformation.weight = x.weight;
-            this.filtrar();
+
           })
       })
+    this.filtrar();
+    this.isLoading = false;
   }
 
   filtrar() {
@@ -89,11 +123,23 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['informations'], { queryParams: { id: id } })
   }
 
-  onScroll(){ 
+  onScroll() {
     this.loading = true;
-      this.getPokemons('next');
+    this.getPokemons('next');
+  }
+
+  public getPokemon() {
+    let poke: Observable<Pokemons>[] = []
+    for (let i = this.pokemon.length - 20; i < this.pokemon.length; i++) {
+
+      poke.push(this.pokemonServices.apiGetPokemon(this.pokemon[i].url));
+    }
+    return forkJoin(poke);
   }
 }
+
+
+
 
 
 
