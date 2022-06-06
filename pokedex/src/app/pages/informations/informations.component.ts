@@ -2,6 +2,7 @@ import { Pokemons } from './../service/pokemon.model';
 import { PokeServiceService } from './../service/poke-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-informations',
@@ -13,6 +14,8 @@ export class InformationsComponent implements OnInit {
   pokemon!: Pokemons;
   poke!: Pokemons;
   idSoma!: number;
+  load! : HomeComponent;
+
   constructor(
     private pokeservice: PokeServiceService,
     private route: ActivatedRoute,
@@ -65,6 +68,6 @@ export class InformationsComponent implements OnInit {
   }
 
   home() {
-    this.router.navigate([''])
+    this.router.navigate(['']); 
   }
 }

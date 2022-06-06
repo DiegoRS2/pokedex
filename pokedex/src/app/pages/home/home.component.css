@@ -30,10 +30,22 @@
 }
 
 .card:hover{
-    -webkit-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    transform: scale(1.02);
-    transition: transform .2s;
+  /* animation: anim 0.5s forwards; */
+  -moz-transform: scale(1.02); 
+  -webkit-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+  animation-delay: 2000ms;
+}
+
+@keyframes anim {
+  0% {
+      margin-top: -5px;
+  }
+
+  100% {
+      margin-top: 0;
+  }
 }
 
 .name{
